@@ -21,7 +21,7 @@ public class Registration {
     @PostMapping("register")
     Mono<ResponseEntity<CharSequence>> registerACar(@RequestBody RegisterForm registerForm) {
         registerService.register(registerForm);
-        return Mono.just(new ResponseEntity<>("Successfully Created", HttpStatus.CREATED));
+        return Mono.just(new ResponseEntity<>("Successfully Created", HttpStatus.CREATED))
     }
 
 
