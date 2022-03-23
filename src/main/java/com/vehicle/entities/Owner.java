@@ -1,5 +1,6 @@
 package com.vehicle.entities;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,8 +13,7 @@ import javax.persistence.Version;
 import java.util.HashSet;
 import java.util.Set;
 
-@Getter
-@Setter
+@Data
 @EqualsAndHashCode
 @Entity(name = "owner")
 public class Owner {
@@ -22,6 +22,7 @@ public class Owner {
     private long phoneNumber;
 
     private String name;
+
     @Version
     private long version;
 
